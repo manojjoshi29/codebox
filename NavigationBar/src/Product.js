@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Home extends Component {
+class Product extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,14 +23,25 @@ class Home extends Component {
 
   render() {
     const items = this.state.list.map((item, key) => (
-      <li key={item.Name}>{item.Name}</li>
+      <tr key={item.Name}>
+        <td> {item.Name}</td>
+        <td> {item.City}</td>
+        <td>{item.Country}</td>
+      </tr>
     ));
     return (
       <div>
-        <ul>{items}</ul>
+        <table border="2px">
+          <tr>
+            <th>NAME</th>
+            <th>CITY</th>
+            <th>COUNTRY</th>
+          </tr>
+          {items}
+        </table>
       </div>
     );
   }
 }
 
-export default Home;
+export default Product;
