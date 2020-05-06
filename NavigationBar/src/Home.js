@@ -27,6 +27,8 @@ class Home extends Component {
     ));
     return (
       <div>
+        Hii ! Welcome to home page
+        <hr />
         <ul>{items}</ul>
       </div>
     );
