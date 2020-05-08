@@ -7,7 +7,7 @@ class Home extends Component {
       list: []
     };
     fetch("https://www.w3schools.com/angular/customers.php", {
-      method: "GET"
+      method: "POST"
     }).then(result => {
       result.json().then(resp => {
         this.setRecords(resp.records);
